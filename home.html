@@ -45,7 +45,7 @@
                     <input type="search" required placeholder="Search" />
                 </label>
 
-                <button class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
+                <button type="button" onclick="searchCard()" class="btn btn-primary"><i class="fa-solid fa-plus"></i> New Issue</button>
             </div>
 
 
@@ -87,11 +87,31 @@
             </div>
         </section>
 
-        <section id="display-container" class=" bg-[#FBFBFB] py-8 rounded-lg shadow-sm p-5 grid grid-cols-4 gap-5 ">
-            
-            
+        <section id="spinner-container" class=" flex justify-center py-26 hidden">
+            <span class="loading loading-spinner loading-xl"></span>
         </section>
-        
+
+        <section id="display-container"
+            class=" bg-[#FBFBFB] py-8 rounded-lg shadow-sm p-5 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-5 ">
+        </section>
+
+
+
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+                <div id="modalContainer" class="">
+                    
+                </div>
+                <div class="modal-action">
+                    <form method="dialog">
+                        <!-- if there is a button in form, it will close the modal -->
+                        <button class="btn btn-primary outline-none">Close</button>
+                    </form>
+                </div>
+            </div>
+        </dialog>
+
+
     </main>
 
     <script src="./js/home.js"></script>
