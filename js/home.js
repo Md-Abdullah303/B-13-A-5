@@ -181,8 +181,18 @@ const leadDetails = (data)=>{
     document.getElementById("my_modal_5").showModal();
 }
 
+const loadSearchDat = (searchText)=>{
+    const url = `https://phi-lab-server.vercel.app/api/v1/lab/issues/search?q=${searchText}`
+    .then(res=>res.json())
+    .them(data=>{
+        
+    })
+}
 
 
+document.getElementById("searchCard").addEventListener("click",()=>{
+    loadSearchDat();
+});
 
 
 
