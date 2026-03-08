@@ -8,6 +8,7 @@ const displayContainer = document.getElementById("display-container");
 
 const countCardNumber = document.getElementById("count-card-number");
 
+
 const allIssues = () => {
     fetch("https://phi-lab-server.vercel.app/api/v1/lab/issues")
         .then(res => res.json())
@@ -43,6 +44,13 @@ const spinner = (status) => {
     }
 }
 
+const removeActive = () => {
+    allFilterBtn.classList.remove("btn-primary");
+    openFilterBtn.classList.remove("btn-primary");
+    closedFilterBtn.classList.remove("btn-primary");
+    return;
+}
+
 const calculate = (arr) => {
     const givenArrylenght = arr.length;
     countCardNumber.innerText = givenArrylenght;
@@ -53,9 +61,7 @@ const toggole = (id) => {
     currentStatus = id;
     spinner(true);
 
-    allFilterBtn.classList.remove("btn-primary");
-    openFilterBtn.classList.remove("btn-primary");
-    closedFilterBtn.classList.remove("btn-primary");
+    removeActive();
 
     const clicedBtn = document.getElementById(id);
     clicedBtn.classList.add("btn-primary");
@@ -70,20 +76,9 @@ const toggole = (id) => {
         displayContainer.innerHTML = "";
         allIssues();
     }
-
+    document.getElementById("inputText").value = "";
 
 }
-
-// assignee: "jane_smith"
-// author: "john_doe"
-// createdAt: "2024-01-15T10:30:00Z"
-// description: "The navigation menu doesn't collapse properly on mobile devices. Need to fix the responsive behavior."
-// id: 1
-// labels: Array [ "bug", "help wanted" ]
-// priority: "high"
-// status: "open"
-// title: "Fix navigation menu on mobile devices"
-// updatedAt: "2024-01-15T10:30:00Z"
 
 const showAllData = (datas) => {
     displayContainer.innerHTML = "";
@@ -151,17 +146,6 @@ const showDetails = (id) => {
         })
 }
 
-// assignee: "sarah_dev"
-// author: "mike_docs"
-// createdAt: "2024-01-10T08:00:00Z"
-// description: "The README file needs better installation instructions for new contributors."
-// id: 3
-// labels: Array [ "documentation" ]
-// priority: "low"
-// status: "closed"
-// title: "Update README with installation instructions"
-// updatedAt: "2024-01-12T16:45:00Z"
-
 
 const leadDetails = (data) => {
     const modalContainer = document.getElementById("modalContainer");
@@ -202,8 +186,10 @@ const loadSearchData = (searchText) => {
 }
 
 
+
 document.getElementById("searchBtn").addEventListener("click", () => {
-    const inputTextValue = document.getElementById("inputText").value;
+    const inputTextValue = document.getElementById("inputText").value.trim();
+    removeActive();
     loadSearchData(inputTextValue);
 });
 
