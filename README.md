@@ -26,5 +26,24 @@ map()=> it return a new array and apply a function on every element of array
 
 filter()=> it return a new array that will pass the condition state , like we have a array let arr = [1,2,3,4,5,6] and use on it let newArr arr.filter(item=> item%2 === 0 ); the newArr variable have the new array of that element that passed the condition and have a new array , the array is will be [2,4,6]
 
+
+
+
 4️⃣ What is an arrow function?
+
+
+ans: 
+arrow function a shortcut to write a function and a profetional way, it's from ES6.
+syntex: 
+const functionName = () => {
+    // code here
+}
+
+
+
 5️⃣ What are template literals?
+
+ans:
+template literals is use full and shortcut way to write a string ,
+we can easyly diploy a variable and any function on useing it ..
+${} under of this we can use out variable and function in name:bactic (` `);
