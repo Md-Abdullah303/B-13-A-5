@@ -24,13 +24,13 @@
 
 <body class="bg-[#F8FAFC] ">
     <header class="bg-[#FFFFFF] border-b border-[#777777]/20 py-3">
-        <nav class="w-11/12 mx-auto flex items-center justify-between">
+        <nav class="w-11/12 mx-auto flex items-center flex-col gap-3 sm:justify-between">
             <div class="flex items-center gap-1.5">
 
                 <div class="w-[40px]">
                     <img src="./assets/github-logo.png" alt="">
                 </div>
-                <h1 class="text-2xl">GitHub Issues Tracker</h1>
+                <h1 class="text-xl sm:text-2xl">GitHub Issues Tracker</h1>
             </div>
 
             <div class="flex items-center gap-5">
@@ -53,9 +53,9 @@
     </header>
 
 
-    <main class="w-[70%] mx-auto pb-10">
+    <main class="w-[90%] sm:w-[70%] mx-auto pb-10">
         <section class="  bg-[#FFFFFF] mt-[60px] mb-4 p-6 rounded-lg ">
-            <div class="space-x-3">
+            <div class=" flex items-center flex-wrap  justify-center sm:justify-start  gap-3  space-x-3">
                 <button onclick="toggole('all-filter-btn')" id="all-filter-btn" class="btn btn-primary">All</button>
                 <button onclick="toggole('open-filter-btn')" id="open-filter-btn" class="btn ">Open</button>
                 <button onclick="toggole('closed-filter-btn')" id="closed-filter-btn" class="btn ">Closed</button>
