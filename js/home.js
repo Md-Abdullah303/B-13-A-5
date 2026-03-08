@@ -90,10 +90,17 @@ const showAllData = (datas) => {
         return;
     }
     // console.log(datas);
-    datas.forEach(data => {
+    datas.forEach((data, index) => {
+        // console.log(data);
         const dataStatus = data.status;
+        let now = new Date(data.createdAt);
+
+        const day = String(now.getDate()).padStart(2, "0");
+        const month = String(now.getMonth() + 1).padStart(2, "0");
+        const year = now.getFullYear();
 
 
+        let today = `${day}-${month}-${year}`;
 
         const div = document.createElement("div");
         div.innerHTML = `
@@ -111,8 +118,8 @@ const showAllData = (datas) => {
                 </div>
                 <!-- <hr class="w-full text-[#777777]/20"> -->
                 <div class="space-y-3 px-5">
-                    <p class="text-[14px] text-[#777777]">#1 by john_doe</p>
-                    <p class="text-[14px] text-[#777777]">1/15/2024</p>
+                    <p class="text-[14px] text-[#777777]">#${data.id} by ${data.author}</p>
+                    <p class="text-[14px] text-[#777777]">${today}</p>
                 </div>
         `;
         displayContainer.appendChild(div);
@@ -142,12 +149,13 @@ const showDetails = (id) => {
         .then(res => res.json())
         .then(data => {
             leadDetails(data.data);
-            console.log(data.data);
+            // console.log(data.data);
         })
 }
 
 
 const leadDetails = (data) => {
+    console.log(data);
     const modalContainer = document.getElementById("modalContainer");
     modalContainer.innerHTML = `
     <div class=" space-y-3">
@@ -163,7 +171,7 @@ const leadDetails = (data) => {
                         <div class=" grid grid-cols-2 gap-1.5 bg-gray-100 rounded-xl p-5">
                             <div class="space-y-2">
                                 <p class="text-[14px] text-gray-400">Assignee:</p>
-                                <h1 class=" text-lg font-semibold">${data.assignee}</h1>
+                                <h1 class=" text-lg font-semibold">${data.assignee.length === 0 ? "Assignee Not Found" : `${data.assignee}`}</h1>
                             </div>
                             <div class="space-y-2 flex flex-col items-start">
                                 <p class="text-[14px] text-gray-400">Priority:</p>
