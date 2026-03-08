@@ -1,7 +1,7 @@
 
 
 const logingBtn = ()=>{
-    const usernamevalue = document.getElementById("username").value;
+    const usernamevalue = document.getElementById("username").value.trim();
     const passwordValue = document.getElementById("password").value;
 
     if(usernamevalue !== "admin"){
