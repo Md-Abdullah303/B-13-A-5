@@ -1,49 +1,38 @@
 1️⃣ What is the difference between var, let, and const?
 Ans:
 
+var => var is a function scope variable. Same variable can be redeclared. Also, if we use var in our code at line number 100, we can use it anywhere because it is hoisted.
 
-var=> var is a function scope variable, same variable will be redeclare, and there also one thing if we use var in our code in line number 100 but we can use in any where bacause it is hosting type
+let => let is a block scope variable. Same variable cannot be redeclared, but it can be reassigned. Also, in our code at line number 5, we can't use it before line 5 (lines 1,2,3,4). It is not hoisted in the same way.
 
-let=> let is block scope variable, same variable not be redeclare but we can reassign it && also in our code in line number 5 we can't use it before 5 like line number (1,2,3,4)it is not hosting type
-
-const=> const is block scope variable,same variable not be redeclare and reassign also in declare must contain a value... also in our code in line number 5 we can't use it before 5 like line number (1,2,3,4)it is not hosting type
-
-
-
+const => const is a block scope variable. Same variable cannot be redeclared or reassigned. Also, it must contain a value during declaration. In our code at line number 5, we can't use it before line 5 (lines 1,2,3,4). It is not hoisted in the same way.
 
 2️⃣ What is the spread operator (...)?
 
-ans:
-The spread operator (...) is :-- it use for fully copy array or object's value, if we declare a variable it container like 4; and want to copy this value in other variable then case we use this (...) , ir we not use it or wright let b = a;  and then something do with variable b , then value of a will change also because they are like linked with other if we change one veriable we it will change other value too.. that's way we use spread operator , a variable value if daclare by spread operator then it will not change on other any variable..
-
-
-
+Ans:
+The spread operator (...) is used to fully copy arrays or objects. If we declare a variable that contains a value (like 4) and want to copy this value into another variable, we use (...). If we do not use it and write let b = a;, then if we change variable b, the value of a will also change because they are linked. If we use the spread operator, the copied value will not affect the original variable.
 
 3️⃣ What is the difference between map(), filter(), and forEach()?
 
-ans: 
-map()=> it return a new array and apply a function on every element of array
+Ans:
+map() => It returns a new array and applies a function on every element of the array.
 
-filter()=> it return a new array that will pass the condition state , like we have a array let arr = [1,2,3,4,5,6] and use on it let newArr arr.filter(item=> item%2 === 0 ); the newArr variable have the new array of that element that passed the condition and have a new array , the array is will be [2,4,6]
+filter() => It returns a new array with elements that pass a condition. For example, if we have an array let arr = [1,2,3,4,5,6] and use let newArr = arr.filter(item => item % 2 === 0);, the new array will be [2,4,6].
 
-
-
+forEach() => It executes a function on each element but does not return a new array.
 
 4️⃣ What is an arrow function?
 
+Ans:
+Arrow function is a shortcut way to write a function and a modern (ES6) way.
 
-ans: 
-arrow function a shortcut to write a function and a profetional way, it's from ES6.
-syntex: 
+Syntax:
 const functionName = () => {
-    // code here
+// code here
 }
-
-
 
 5️⃣ What are template literals?
 
-ans:
-template literals is use full and shortcut way to write a string ,
-we can easyly diploy a variable and any function on useing it ..
-${} under of this we can use out variable and function in name:bactic (` `);
+Ans:
+Template literals are a useful and shortcut way to write strings.
+We can easily use variables and functions inside them using ${} inside backticks ( ).
