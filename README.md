@@ -46,3 +46,20 @@ To access the issues dashboard from the login page, use the following credential
 - **Icons:** [Font Awesome 7](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css)
 - **Logic & Interactions:** Vanilla JavaScript (ES6+)
 - **Data Source:** REST API (`https://phi-lab-server.vercel.app/api/v1/lab/issues`)
+
+---
+
+## 📂 Project Structure
+
+```text
+├── assets/                  # Logos and image assets
+├── js/
+│   ├── home.js              # Issues fetching, filter, search, and modal handling
+│   └── script.js            # Login validation and redirect logic
+├── styles/
+│   └── style.css            # Custom CSS styling and typography
+├── home.html                # Main issues tracker dashboard interface
+├── index.html               # Login / authentication landing page
+├── tailwind.config.css      # Tailwind CSS configuration file
+└── README.md                # Project documentation and assignment answers
+```
