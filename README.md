@@ -23,3 +23,16 @@ To access the issues dashboard from the login page, use the following credential
 | :--- | :--- |
 | **Username** | `admin` |
 | **Password** | `admin123` |
+
+---
+
+## ✨ Key Features
+
+- **Authentication System:** Client-side form validation with pre-configured demo credentials.
+- **Live REST API Integration:** Fetches real-time issues dynamically from the remote API endpoint.
+- **Interactive Status Filtering:** Seamlessly toggle between **All**, **Open**, and **Closed** issues.
+- **Instant Search:** Search issues by title or keyword dynamically.
+- **Real-Time Issue Counter:** Live badge counter updating automatically according to the active filter and search result.
+- **Detailed Modal View:** Click on any issue card to view full descriptions, author details, timestamps, and labels.
+- **Priority Badges:** Visually clear badges indicating **High**, **Medium**, and **Low** priority issues.
+- **Responsive Layout:** Beautiful modern design adapting cleanly across Mobile, Tablet, and Desktop screens.
