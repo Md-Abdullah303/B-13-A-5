@@ -186,3 +186,14 @@ const project = "GitHub Issues Tracker";
 const welcomeMessage = `Hello, ${name}! Welcome to the ${project}.
 Current Date: ${new Date().toLocaleDateString()}`;
 ```
+
+---
+
+## 👨‍💻 Author
+
+- **Developer:** [Md. Abdullah](https://github.com/Md-Abdullah303)
+- **Course:** Programming Hero (Batch 13 - Assignment 5)
+
+---
+
+<p align="center">Made with ❤️ for GitHub Issues Tracker Project</p>
