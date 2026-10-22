@@ -83,3 +83,21 @@ This project requires no complex installations or package managers (`npm`/`yarn`
 3. **Launch the application:**
    - Double-click `index.html` to open it directly in your web browser.
    - Or open the project in VS Code, right-click `index.html`, and select **"Open with Live Server"**.
+
+---
+
+## 📝 Assignment Conceptual Questions & Answers
+
+### 1️⃣ What is the difference between `var`, `let`, and `const`?
+
+| Characteristic | `var` | `let` | `const` |
+| :--- | :--- | :--- | :--- |
+| **Scope** | Function-scoped | Block-scoped (`{ ... }`) | Block-scoped (`{ ... }`) |
+| **Re-declaration** | Allowed within the same scope | Not allowed in the same scope | Not allowed in the same scope |
+| **Re-assignment** | Allowed | Allowed | Not allowed (immutable binding) |
+| **Hoisting** | Hoisted and initialized with `undefined` | Hoisted but in Temporal Dead Zone (TDZ) | Hoisted but in Temporal Dead Zone (TDZ) |
+| **Initial Value** | Optional during declaration | Optional during declaration | Required at declaration time |
+
+- **`var`:** The legacy way to declare variables. Scoped to the enclosing function, which can lead to unintentional bugs and leaks.
+- **`let`:** Introduced in ES6. Allows re-assignment but prevents accidental re-declaration within the same block.
+- **`const`:** Introduced in ES6. Used for constants whose binding cannot be re-assigned. Recommended as default for predictable code.
