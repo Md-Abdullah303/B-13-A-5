@@ -101,3 +101,25 @@ This project requires no complex installations or package managers (`npm`/`yarn`
 - **`var`:** The legacy way to declare variables. Scoped to the enclosing function, which can lead to unintentional bugs and leaks.
 - **`let`:** Introduced in ES6. Allows re-assignment but prevents accidental re-declaration within the same block.
 - **`const`:** Introduced in ES6. Used for constants whose binding cannot be re-assigned. Recommended as default for predictable code.
+
+---
+
+### 2️⃣ What is the spread operator (`...`)?
+
+The **spread operator** (`...`) in ES6 expands an iterable (such as an array or object) into individual elements. 
+
+**Key Benefits & Uses:**
+1. **Immutable Copying:** Creates a shallow copy of an array or object without referencing the original memory location, avoiding unintended mutations.
+2. **Merging Data:** Easily merges multiple arrays or objects together into one.
+3. **Function Arguments:** Passes an array's items as individual arguments into functions (e.g., `Math.max(...numbers)`).
+
+```javascript
+// Copying an array without mutation
+const originalArray = [10, 20, 30];
+const copiedArray = [...originalArray, 40, 50]; 
+console.log(copiedArray); // [10, 20, 30, 40, 50]
+
+// Merging objects
+const baseUser = { name: "Abdullah", role: "Developer" };
+const userProfile = { ...baseUser, status: "Active" };
+```
