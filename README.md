@@ -146,3 +146,43 @@ const evens = numbers.filter(num => num % 2 === 0); // [2, 4, 6]
 // forEach(): Iterating without creating a return array
 numbers.forEach(num => console.log(`Item: ${num}`));
 ```
+
+---
+
+### 4️⃣ What is an arrow function?
+
+An **arrow function** (`() => {}`) is a shorter and more elegant syntax for writing functions introduced in ES6.
+
+**Key Characteristics:**
+- **Compact Syntax:** Implicit returns for single-expression functions without needing the `return` keyword or curly braces.
+- **Lexical `this` Binding:** Arrow functions do not bind their own `this`; they inherit `this` from the enclosing lexical execution context.
+- **Ideal for Callbacks:** Widely used in modern JavaScript higher-order functions such as `map`, `filter`, and event listeners.
+
+```javascript
+// Standard function
+function sum(a, b) {
+  return a + b;
+}
+
+// Arrow function (concise body with implicit return)
+const sum = (a, b) => a + b;
+```
+
+---
+
+### 5️⃣ What are template literals?
+
+**Template literals** are ES6 string literals delimited by backticks (`` ` ``) rather than single (`'`) or double (`"`) quotes.
+
+**Main Features:**
+1. **String Interpolation:** Seamlessly embed variables and expressions directly into strings using `${expression}` syntax.
+2. **Multi-line Support:** Create clean multi-line text without ugly `\n` newline characters or string concatenation (`+`).
+
+```javascript
+const name = "Md. Abdullah";
+const project = "GitHub Issues Tracker";
+
+// Modern template literal with embedded expression
+const welcomeMessage = `Hello, ${name}! Welcome to the ${project}.
+Current Date: ${new Date().toLocaleDateString()}`;
+```
