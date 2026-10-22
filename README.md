@@ -123,3 +123,26 @@ console.log(copiedArray); // [10, 20, 30, 40, 50]
 const baseUser = { name: "Abdullah", role: "Developer" };
 const userProfile = { ...baseUser, status: "Active" };
 ```
+
+---
+
+### 3️⃣ What is the difference between `map()`, `filter()`, and `forEach()`?
+
+| Method | Returns a New Array? | Purpose | Can Chain Other Methods? |
+| :--- | :--- | :--- | :--- |
+| **`map()`** | ✅ Yes | Transforms every element in the array and returns a new array of identical length. | ✅ Yes |
+| **`filter()`** | ✅ Yes | Evaluates elements against a boolean condition and returns a new array with items that pass (`true`). | ✅ Yes |
+| **`forEach()`** | ❌ No (`undefined`) | Executes a callback function once for each element (used for side-effects like logging or DOM manipulation). | ❌ No |
+
+```javascript
+const numbers = [1, 2, 3, 4, 5, 6];
+
+// map(): Doubling all numbers
+const doubled = numbers.map(num => num * 2); // [2, 4, 6, 8, 10, 12]
+
+// filter(): Keeping only even numbers
+const evens = numbers.filter(num => num % 2 === 0); // [2, 4, 6]
+
+// forEach(): Iterating without creating a return array
+numbers.forEach(num => console.log(`Item: ${num}`));
+```
