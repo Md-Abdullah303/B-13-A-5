@@ -12,3 +12,14 @@
 ## 📌 Project Overview
 
 **GitHub Issues Tracker** is a front-end web application that simulates a real-world issue management dashboard. It allows users to authenticate with demo credentials, view live issues fetched dynamically from a REST API, filter issues by status (All, Open, Closed), search issues by title, and inspect issue details inside an interactive modal.
+
+---
+
+## 🔐 Demo Credentials
+
+To access the issues dashboard from the login page, use the following credentials:
+
+| Field | Value |
+| :--- | :--- |
+| **Username** | `admin` |
+| **Password** | `admin123` |
