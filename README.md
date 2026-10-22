@@ -36,3 +36,13 @@ To access the issues dashboard from the login page, use the following credential
 - **Detailed Modal View:** Click on any issue card to view full descriptions, author details, timestamps, and labels.
 - **Priority Badges:** Visually clear badges indicating **High**, **Medium**, and **Low** priority issues.
 - **Responsive Layout:** Beautiful modern design adapting cleanly across Mobile, Tablet, and Desktop screens.
+
+---
+
+## 🛠️ Technology Stack
+
+- **Markup:** HTML5 (Semantic Structure)
+- **Styling:** [Tailwind CSS v4](https://tailwindcss.com/) & [DaisyUI v5](https://daisyui.com/) (loaded via CDN)
+- **Icons:** [Font Awesome 7](https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css)
+- **Logic & Interactions:** Vanilla JavaScript (ES6+)
+- **Data Source:** REST API (`https://phi-lab-server.vercel.app/api/v1/lab/issues`)
