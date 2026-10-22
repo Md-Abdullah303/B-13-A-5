@@ -63,3 +63,23 @@ To access the issues dashboard from the login page, use the following credential
 ├── tailwind.config.css      # Tailwind CSS configuration file
 └── README.md                # Project documentation and assignment answers
 ```
+
+---
+
+## 💻 Getting Started & Setup
+
+### Prerequisites
+This project requires no complex installations or package managers (`npm`/`yarn`). It runs smoothly directly inside any modern web browser.
+
+### Running Locally
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/Md-Abdullah303/B-13-A-5.git
+   ```
+2. **Navigate into the folder:**
+   ```bash
+   cd B-13-A-5
+   ```
+3. **Launch the application:**
+   - Double-click `index.html` to open it directly in your web browser.
+   - Or open the project in VS Code, right-click `index.html`, and select **"Open with Live Server"**.
